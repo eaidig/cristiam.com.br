@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cristiam - Especialista em Diagnóstico e Programação Remota Volkswagen e GM para oficinas, auto elétricas e chaveiros." />
+    
+    <!-- Open Graph (WhatsApp, Facebook, etc.) sharing metadata -->
+    <meta property="og:title" content="Cristiam Diagnóstico Remoto - Especialista VW e GM" />
+    <meta property="og:description" content="Especialista em diagnóstico eletrônico, programação de módulos e codificação online para veículos Volkswagen e General Motors. Atendimento 100% remoto para todo o Brasil." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    
+    <!-- Twitter card metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cristiam Diagnóstico Remoto - Especialista VW e GM" />
+    <meta name="twitter:description" content="Especialista em diagnóstico eletrônico, programação de módulos e codificação online para veículos Volkswagen e General Motors. Atendimento 100% remoto para todo o Brasil." />
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1200&auto=format&fit=crop" />
+    
+    <!-- Favicon (Chave de Boca Vermelha) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D60000' stroke='%23D60000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z'/%3E%3C/svg%3E" />
+
+    <title>Cristiam Diagnóstico Remoto - Especialista VW e GM</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                red: '#D60000',
+                redHover: '#B00000',
+                dark: '#111111',
+                yellow: '#FDB913',
+                green: '#25D366',
+                greenHover: '#128C7E'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+      
+      /* Smooth custom animations */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in-up {
+        animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      /* Scroll Reveal Classes */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Pulse slow for background elements */
+      @keyframes pulseSlow {
+        0%, 100% { opacity: 0.15; }
+        50% { opacity: 0.25; }
+      }
+      .animate-pulse-slow {
+        animation: pulseSlow 4s ease-in-out infinite;
+      }
+
+      /* Pulse scale for WhatsApp floating button */
+      @keyframes pulseScale {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.08); }
+      }
+      .animate-pulse-scale {
+        animation: pulseScale 2s infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900 antialiased">
+
+    <!-- HEADER / NAVIGATION -->
+    <header id="header" class="fixed w-full top-0 left-0 z-50 transition-all duration-300 py-5">
+      <div class="container mx-auto px-4">
+        <div class="bg-brand-dark/90 backdrop-blur-md border border-white/10 rounded-2xl px-6 py-4 flex items-center justify-between shadow-xl">
+          <!-- Logo -->
+          <a href="#hero" class="flex items-center gap-2">
+            <span class="text-xl md:text-2xl font-bold tracking-tight text-white">
+              CRISTIAM<span class="text-brand-red font-medium text-base ml-1.5 border-l border-white/20 pl-1.5 tracking-wider">DIAGNÓSTICO</span>
+            </span>
+          </a>
+
+          <!-- Desktop Nav Menu -->
+          <nav class="hidden md:flex items-center gap-8">
+            <a href="#hero" class="text-sm font-medium text-gray-300 hover:text-brand-yellow transition-colors">Home</a>
+            <a href="#about" class="text-sm font-medium text-gray-300 hover:text-brand-yellow transition-colors">Sobre</a>
+            <a href="#services" class="text-sm font-medium text-gray-300 hover:text-brand-yellow transition-colors">Serviços</a>
+            <a href="#contact" class="text-sm font-medium text-gray-300 hover:text-brand-yellow transition-colors">Contato</a>
+          </nav>
+
+          <!-- Action Button -->
+          <div class="hidden md:block">
+            <a href="#contact" class="bg-brand-red hover:bg-brand-redHover text-white px-5 py-2.5 rounded-xl text-sm font-bold transition-all shadow-lg hover:shadow-red-900/25 flex items-center gap-1.5">
+              <i data-lucide="wrench" class="w-4 h-4"></i>
+              Suporte Remoto
+            </a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden text-white hover:text-brand-yellow focus:outline-none transition-colors" aria-label="Abrir Menu">
+            <i data-lucide="menu" id="menu-icon" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div id="mobile-menu" class="hidden md:hidden px-4 mt-2 transition-all duration-300 ease-in-out">
+        <div class="bg-brand-dark/95 backdrop-blur-lg border border-white/10 rounded-2xl p-6 flex flex-col gap-4 shadow-2xl">
+          <a href="#hero" class="mobile-link text-lg font-medium text-gray-200 hover:text-brand-yellow border-b border-white/5 pb-2">Home</a>
+          <a href="#about" class="mobile-link text-lg font-medium text-gray-200 hover:text-brand-yellow border-b border-white/5 pb-2">Sobre</a>
+          <a href="#services" class="mobile-link text-lg font-medium text-gray-200 hover:text-brand-yellow border-b border-white/5 pb-2">Serviços</a>
+          <a href="#contact" class="mobile-link text-lg font-medium text-gray-200 hover:text-brand-yellow pb-2">Contato</a>
+          <a href="#contact" class="mobile-link bg-brand-red hover:bg-brand-redHover text-white py-3 rounded-xl text-center font-bold transition-colors shadow-lg mt-2 flex items-center justify-center gap-2">
+            <i data-lucide="wrench" class="w-5 h-5"></i>
+            Suporte Remoto
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="hero" class="relative h-screen min-h-[650px] flex items-center pt-20 overflow-hidden">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-red/95 via-brand-red/80 to-brand-dark/60 z-10 mix-blend-multiply"></div>
+        <div class="absolute inset-0 bg-black/45 z-10"></div>
+        <img 
+          src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1920&auto=format&fit=crop" 
+          alt="Diagnóstico Automotivo Avançado" 
+          class="w-full h-full object-cover scale-105"
+        />
+      </div>
+
+      <div class="container mx-auto px-4 relative z-20 text-white h-full flex flex-col justify-center">
+        <div class="max-w-3xl">
+          <div class="animate-fade-in-up" style="animation-delay: 0ms;">
+            <div class="inline-flex items-center gap-2 bg-white/10 border border-white/20 rounded-full px-4 py-1.5 mb-8 backdrop-blur-md shadow-sm hover:bg-white/20 transition-colors cursor-default">
+              <i data-lucide="star" class="w-4 h-4 text-brand-yellow fill-brand-yellow"></i>
+              <span class="text-sm font-semibold tracking-wide text-white">Especialista Volkswagen e GM</span>
+            </div>
+          </div>
+          
+          <div class="animate-fade-in-up" style="animation-delay: 200ms;">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 drop-shadow-lg">
+              Tecnologia Avançada em<br/>
+              <span class="text-brand-yellow">Diagnóstico Remoto</span>
+            </h1>
+          </div>
+          
+          <div class="animate-fade-in-up" style="animation-delay: 400ms;">
+            <p class="text-lg md:text-xl text-gray-100 mb-10 max-w-2xl leading-relaxed font-light drop-shadow-md">
+              Soluções completas em eletrônica embarcada e programação para veículos Volkswagen e General Motors. Apoio técnico especializado para potencializar os serviços da sua oficina.
+            </p>
+          </div>
+
+          <div class="animate-fade-in-up" style="animation-delay: 600ms;">
+            <div class="flex flex-col sm:flex-row gap-4 mb-16">
+              <a 
+                href="#contact" 
+                class="bg-brand-green hover:bg-brand-greenHover text-white px-8 py-4 rounded-xl font-bold text-lg transition-all transform hover:-translate-y-1 hover:shadow-xl hover:shadow-green-900/20 flex items-center justify-center gap-2 group"
+              >
+                Agendar Diagnóstico Remoto
+                <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+              </a>
+              <a 
+                href="#services" 
+                class="bg-white/10 border-2 border-white/30 hover:bg-white hover:text-brand-red text-white px-8 py-4 rounded-xl font-bold text-lg transition-all backdrop-blur-sm flex items-center justify-center hover:-translate-y-1"
+              >
+                Como Funciona
+              </a>
+            </div>
+          </div>
+
+          <div class="animate-fade-in-up" style="animation-delay: 800ms;">
+            <div class="flex flex-wrap gap-6 text-sm md:text-base font-medium text-white/90 border-t border-white/20 pt-8">
+              <div class="flex items-center gap-2">
+                <div class="p-1 bg-brand-yellow/20 rounded-full">
+                  <i data-lucide="zap" class="text-brand-yellow w-5 h-5"></i>
+                </div>
+                <span>100% Remoto</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 bg-brand-yellow rounded-full"></div>
+                <span>Foco em VW e GM</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <div class="w-1.5 h-1.5 bg-brand-yellow rounded-full"></div>
+                <span>Suporte Especializado</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white overflow-hidden">
+      <div class="container mx-auto px-4">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="order-2 lg:order-1">
+            <div class="reveal">
+              <div class="inline-block px-4 py-1.5 bg-red-50 text-brand-red rounded-full text-sm font-bold mb-6 tracking-wide border border-red-100">
+                QUEM SOMOS
+              </div>
+            </div>
+            <div class="reveal">
+              <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Quem é o <span class="text-brand-red">Cristiam?</span>
+              </h2>
+            </div>
+            <div class="reveal">
+              <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                Com vasta experiência prática no setor automotivo, Cristiam se especializou na resolução de falhas eletrônicas complexas e programação avançada das linhas Volkswagen e GM.
+              </p>
+            </div>
+            <div class="reveal">
+              <p class="text-gray-600 leading-relaxed mb-10">
+                Entendendo a dor de donos de oficinas, auto elétricas e chaveiros que perdem dinheiro e clientes por falta de suporte técnico especializado, criou um modelo de atendimento 100% remoto e eficiente. Hoje, atende diversas oficinas parceiras e frotistas, entregando soluções precisas com equipamentos de ponta. O objetivo é um só: ser o seu parceiro estratégico de retaguarda.
+              </p>
+            </div>
+            
+            <div class="reveal">
+              <div class="grid grid-cols-2 gap-4 md:gap-6">
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-brand-red/20 transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="text-3xl md:text-4xl font-bold text-brand-red mb-2">16+</div>
+                  <div class="text-gray-600 font-medium text-xs md:text-sm uppercase tracking-wide">Anos de Experiência</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-brand-red/20 transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="text-3xl md:text-4xl font-bold text-brand-red mb-2">500+</div>
+                  <div class="text-gray-600 font-medium text-xs md:text-sm uppercase tracking-wide">Oficinas Parceiras</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-brand-red/20 transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="text-3xl md:text-4xl font-bold text-brand-red mb-2">100%</div>
+                  <div class="text-gray-600 font-medium text-xs md:text-sm uppercase tracking-wide">Remoto e Seguro</div>
+                </div>
+                <div class="text-center p-6 bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:border-brand-red/20 transition-all duration-300 transform hover:-translate-y-1">
+                  <div class="text-3xl md:text-4xl font-bold text-brand-red mb-2">2</div>
+                  <div class="text-gray-600 font-medium text-xs md:text-sm uppercase tracking-wide">Marcas Especialistas</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="relative order-1 lg:order-2">
+            <div class="reveal">
+              <div class="relative z-10 group">
+                <div class="absolute -inset-4 bg-brand-red/5 rounded-3xl rotate-6 transform transition-transform group-hover:rotate-3"></div>
+                <div class="absolute -inset-4 bg-brand-yellow/10 rounded-3xl -rotate-3 transform transition-transform group-hover:-rotate-1"></div>
+                <img 
+                  src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?q=80&w=1000&auto=format&fit=crop" 
+                  alt="Especialista em diagnóstico automotivo remoto" 
+                  class="relative rounded-2xl shadow-2xl w-full h-full object-cover aspect-[4/3] transform transition-transform hover:scale-[1.02] duration-500"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white border-t border-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="reveal">
+            <div class="inline-block px-4 py-1.5 bg-red-50 text-brand-red rounded-full text-sm font-bold mb-4 border border-red-100">
+              NOSSOS SERVIÇOS
+            </div>
+          </div>
+          <div class="reveal">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Soluções Remotas para Sua Oficina
+            </h2>
+          </div>
+          <div class="reveal">
+            <p class="text-gray-600 text-lg">
+              Reduza o tempo de pátio ocupado e evite trocas de peças desnecessárias. Nossa tecnologia de ponta atende diretamente a sua necessidade.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="reveal">
+            <div class="bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-2 group border border-gray-100 h-full flex flex-col">
+              <div class="w-14 h-14 bg-white text-brand-red rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-red group-hover:text-white transition-all duration-300 group-hover:scale-110">
+                <i data-lucide="zap" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-red transition-colors">
+                Diagnóstico Remoto VW
+              </h3>
+              <p class="text-gray-600 mb-6 flex-grow leading-relaxed">
+                Acesse o nível de diagnóstico de concessionária (ODIS) diretamente da sua oficina. Identificamos falhas complexas de rede CAN, imobilizador e injeção na linha VW com precisão.
+              </p>
+              <a href="#contact" class="inline-flex items-center text-sm font-bold text-brand-red hover:text-brand-yellow transition-colors mt-auto group-hover:translate-x-2 duration-300">
+                Solicitar Diagnóstico <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="reveal">
+            <div class="bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-2 group border border-gray-100 h-full flex flex-col">
+              <div class="w-14 h-14 bg-white text-brand-red rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-red group-hover:text-white transition-all duration-300 group-hover:scale-110">
+                <i data-lucide="activity" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-red transition-colors">
+                Diagnóstico Remoto GM
+              </h3>
+              <p class="text-gray-600 mb-6 flex-grow leading-relaxed">
+                Soluções eletrônicas completas para a linha Chevrolet (SPS2/Techline). Do diagnóstico de injeção a falhas de comunicação de rede, programação de painel e BCM.
+              </p>
+              <a href="#contact" class="inline-flex items-center text-sm font-bold text-brand-red hover:text-brand-yellow transition-colors mt-auto group-hover:translate-x-2 duration-300">
+                Solicitar Diagnóstico <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="reveal">
+            <div class="bg-gray-50 rounded-2xl p-8 transition-all duration-300 hover:bg-white hover:shadow-xl hover:shadow-gray-200/50 hover:-translate-y-2 group border border-gray-100 h-full flex flex-col">
+              <div class="w-14 h-14 bg-white text-brand-red rounded-xl flex items-center justify-center mb-6 shadow-sm group-hover:bg-brand-red group-hover:text-white transition-all duration-300 group-hover:scale-110">
+                <i data-lucide="cpu" class="w-7 h-7"></i>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 mb-3 group-hover:text-brand-red transition-colors">
+                Programação de Módulos
+              </h3>
+              <p class="text-gray-600 mb-6 flex-grow leading-relaxed">
+                Codificações online, adaptações de módulos (ECU, BCM, ABS, Airbag), reset de parâmetros e programação de chaves via acesso remoto seguro.
+              </p>
+              <a href="#contact" class="inline-flex items-center text-sm font-bold text-brand-red hover:text-brand-yellow transition-colors mt-auto group-hover:translate-x-2 duration-300">
+                Solicitar Diagnóstico <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-24 bg-gray-900 text-white relative overflow-hidden">
+      <!-- Decorative background element -->
+      <div class="absolute top-0 right-0 w-2/3 h-full bg-gradient-to-l from-brand-red/10 to-transparent skew-x-12 translate-x-20 pointer-events-none"></div>
+
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto">
+          <div class="text-center mb-16">
+            <div class="reveal">
+              <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+                Como Funciona o <br/><span class="text-brand-yellow font-bold">Atendimento Remoto</span>
+              </h2>
+            </div>
+            <div class="reveal">
+              <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                Nosso processo foi desenhado para ser simples, seguro e rentável para o seu negócio. Veja como é fácil ter um especialista trabalhando junto com você:
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex justify-center">
+            <div class="flex flex-col gap-y-4 text-left w-full max-w-3xl">
+              <!-- Step 1 -->
+              <div class="reveal">
+                <div class="flex items-start gap-4 bg-white/5 p-6 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <i data-lucide="check-circle" class="text-brand-green flex-shrink-0 mt-1 w-6 h-6"></i>
+                  <span class="text-lg font-medium tracking-wide leading-relaxed">PASSO 1: Você entra em contato via WhatsApp relatando o problema do veículo (VW ou GM).</span>
+                </div>
+              </div>
+              <!-- Step 2 -->
+              <div class="reveal">
+                <div class="flex items-start gap-4 bg-white/5 p-6 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <i data-lucide="check-circle" class="text-brand-green flex-shrink-0 mt-1 w-6 h-6"></i>
+                  <span class="text-lg font-medium tracking-wide leading-relaxed">PASSO 2: Conectamos remotamente ao seu equipamento de diagnóstico através da internet.</span>
+                </div>
+              </div>
+              <!-- Step 3 -->
+              <div class="reveal">
+                <div class="flex items-start gap-4 bg-white/5 p-6 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <i data-lucide="check-circle" class="text-brand-green flex-shrink-0 mt-1 w-6 h-6"></i>
+                  <span class="text-lg font-medium tracking-wide leading-relaxed">PASSO 3: Realizamos a leitura, programação ou diagnóstico avançado enquanto você acompanha.</span>
+                </div>
+              </div>
+              <!-- Step 4 -->
+              <div class="reveal">
+                <div class="flex items-start gap-4 bg-white/5 p-6 rounded-xl border border-white/10 hover:bg-white/10 transition-colors">
+                  <i data-lucide="check-circle" class="text-brand-green flex-shrink-0 mt-1 w-6 h-6"></i>
+                  <span class="text-lg font-medium tracking-wide leading-relaxed">PASSO 4: Problema resolvido! Você finaliza o serviço e fatura com o seu cliente.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="reveal">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Por que ser uma <br/><span class="text-brand-red font-bold">Oficina Parceira?</span>
+            </h2>
+          </div>
+          <div class="reveal">
+            <p class="text-gray-600 text-lg">
+              Oferecemos uma parceria sólida para mecânicas, auto elétricas e chaveiros automotivos.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Card 1 -->
+          <div class="reveal">
+            <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200/60 pb-3">Aumente seu Faturamento</h3>
+              <p class="text-gray-600 leading-relaxed">Não recuse mais serviços complexos. Pegue o carro, nós resolvemos a eletrônica e você fatura o serviço completo.</p>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="reveal">
+            <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200/60 pb-3">Reduza o Tempo de Pátio</h3>
+              <p class="text-gray-600 leading-relaxed">Diagnósticos rápidos e precisos evitam que o carro do seu cliente fique dias ocupando espaço na sua oficina.</p>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="reveal">
+            <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200/60 pb-3">Evite Troca de Peças</h3>
+              <p class="text-gray-600 leading-relaxed">Com diagnóstico assertivo de nível de concessionária, você troca apenas o que realmente está com defeito.</p>
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div class="reveal">
+            <div class="p-8 bg-gray-50 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+              <h3 class="text-xl font-bold text-gray-900 mb-4 border-b border-gray-200/60 pb-3">Suporte Especializado</h3>
+              <p class="text-gray-600 leading-relaxed">Tenha um especialista em VW e GM sempre à disposição para tirar dúvidas e orientar nos procedimentos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-gray-50 border-t border-gray-100 relative overflow-hidden">
+      <div class="absolute -left-32 -bottom-32 w-96 h-96 bg-brand-red/5 rounded-full filter blur-3xl pointer-events-none animate-pulse-slow"></div>
+      
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="reveal">
+            <div class="inline-flex items-center gap-1.5 px-4 py-1.5 bg-yellow-50 border border-yellow-100 text-brand-yellow rounded-full text-sm font-bold mb-4">
+              <i data-lucide="star" class="w-4 h-4 fill-brand-yellow text-brand-yellow"></i>
+              <span>4.9/5 estrelas no Google</span>
+            </div>
+          </div>
+          <div class="reveal">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              O que dizem nossos <span class="text-brand-red font-bold">Parceiros</span>
+            </h2>
+          </div>
+        </div>
+
+        <!-- Carousel Slider Container -->
+        <div class="max-w-4xl mx-auto relative px-4 md:px-12">
+          <!-- Slider viewport -->
+          <div class="overflow-hidden">
+            <div id="testimonial-slider" class="flex transition-transform duration-500 ease-in-out">
+              <!-- Slide 1 -->
+              <div class="w-full flex-shrink-0 px-4">
+                <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full relative">
+                  <i data-lucide="quote" class="absolute top-6 right-8 text-gray-100 w-16 h-16 -z-0"></i>
+                  <div class="flex gap-1 mb-6 relative z-10">
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                  </div>
+                  <p class="text-gray-600 italic text-lg md:text-xl leading-relaxed mb-8 relative z-10">
+                    "Estávamos com um Cruze parado há dias. O Cristiam acessou e resolveu o problema de rede em menos de uma hora."
+                  </p>
+                  <div class="mt-auto border-t border-gray-100 pt-6 flex items-center justify-between">
+                    <div>
+                      <h4 class="font-bold text-gray-900 text-lg">Auto Elétrica São João</h4>
+                      <span class="text-sm text-brand-red font-medium">Diagnóstico GM</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Slide 2 -->
+              <div class="w-full flex-shrink-0 px-4">
+                <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full relative">
+                  <i data-lucide="quote" class="absolute top-6 right-8 text-gray-100 w-16 h-16 -z-0"></i>
+                  <div class="flex gap-1 mb-6 relative z-10">
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                  </div>
+                  <p class="text-gray-600 italic text-lg md:text-xl leading-relaxed mb-8 relative z-10">
+                    "Parceria forte! Agora não perco mais serviço de codificação VW, o Cristiam faz tudo remoto pra mim."
+                  </p>
+                  <div class="mt-auto border-t border-gray-100 pt-6 flex items-center justify-between">
+                    <div>
+                      <h4 class="font-bold text-gray-900 text-lg">Chaveiro Express</h4>
+                      <span class="text-sm text-brand-red font-medium">Programação de Chaves</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="w-full flex-shrink-0 px-4">
+                <div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-gray-100 flex flex-col h-full relative">
+                  <i data-lucide="quote" class="absolute top-6 right-8 text-gray-100 w-16 h-16 -z-0"></i>
+                  <div class="flex gap-1 mb-6 relative z-10">
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                    <i data-lucide="star" class="w-5 h-5 text-brand-yellow fill-brand-yellow"></i>
+                  </div>
+                  <p class="text-gray-600 italic text-lg md:text-xl leading-relaxed mb-8 relative z-10">
+                    "Ter um especialista na retaguarda mudou o faturamento da minha oficina. Recomendo muito!"
+                  </p>
+                  <div class="mt-auto border-t border-gray-100 pt-6 flex items-center justify-between">
+                    <div>
+                      <h4 class="font-bold text-gray-900 text-lg">Mecânica do Beto</h4>
+                      <span class="text-sm text-brand-red font-medium">Diagnóstico VW</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carousel Controls (Dot indicators) -->
+          <div class="flex justify-center gap-3 mt-10">
+            <button class="dot-btn w-3 h-3 rounded-full bg-brand-red transition-all duration-300" onclick="goToSlide(0)" aria-label="Slide 1"></button>
+            <button class="dot-btn w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" onclick="goToSlide(1)" aria-label="Slide 2"></button>
+            <button class="dot-btn w-3 h-3 rounded-full bg-gray-300 hover:bg-gray-400 transition-all duration-300" onclick="goToSlide(2)" aria-label="Slide 3"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <div class="text-center mb-16">
+          <div class="reveal">
+            <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+              Dúvidas <span class="text-brand-red font-bold">Frequentes</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="space-y-4">
+          <!-- Accordion 1 -->
+          <div class="reveal">
+            <div class="faq-item border border-gray-150 rounded-2xl overflow-hidden transition-all duration-300 bg-gray-50 hover:bg-white hover:shadow-lg hover:shadow-gray-200/30">
+              <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-lg text-gray-900 flex justify-between items-center select-none" onclick="toggleFaq(this)">
+                <span>Como funciona o acesso remoto?</span>
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-brand-red transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                <p class="pb-6 text-gray-600 leading-relaxed">
+                  Você precisa ter um equipamento de diagnóstico compatível (interface) e acesso à internet na sua oficina. Nós conectamos ao seu computador via software seguro e realizamos o procedimento como se estivéssemos aí.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion 2 -->
+          <div class="reveal">
+            <div class="faq-item border border-gray-150 rounded-2xl overflow-hidden transition-all duration-300 bg-gray-50 hover:bg-white hover:shadow-lg hover:shadow-gray-200/30">
+              <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-lg text-gray-900 flex justify-between items-center select-none" onclick="toggleFaq(this)">
+                <span>Quais marcas vocês atendem?</span>
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-brand-red transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                <p class="pb-6 text-gray-600 leading-relaxed">
+                  Somos especialistas focados exclusivamente nas linhas Volkswagen e GM (Chevrolet). Isso garante um nível de profundidade e assertividade de concessionária.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion 3 -->
+          <div class="reveal">
+            <div class="faq-item border border-gray-150 rounded-2xl overflow-hidden transition-all duration-300 bg-gray-50 hover:bg-white hover:shadow-lg hover:shadow-gray-200/30">
+              <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-lg text-gray-900 flex justify-between items-center select-none" onclick="toggleFaq(this)">
+                <span>É seguro fazer programação pela internet?</span>
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-brand-red transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                <p class="pb-6 text-gray-600 leading-relaxed">
+                  Sim, 100% seguro. Utilizamos softwares profissionais e conexões estáveis. Orientamos você passo a passo durante todo o processo para garantir a segurança dos módulos do veículo.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion 4 -->
+          <div class="reveal">
+            <div class="faq-item border border-gray-150 rounded-2xl overflow-hidden transition-all duration-300 bg-gray-50 hover:bg-white hover:shadow-lg hover:shadow-gray-200/30">
+              <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-lg text-gray-900 flex justify-between items-center select-none" onclick="toggleFaq(this)">
+                <span>Como é feito o pagamento?</span>
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-brand-red transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                <p class="pb-6 text-gray-600 leading-relaxed">
+                  O pagamento é feito via PIX após a conclusão do diagnóstico ou programação. Para oficinas parceiras com volume de serviços, podemos combinar faturamento.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Accordion 5 -->
+          <div class="reveal">
+            <div class="faq-item border border-gray-150 rounded-2xl overflow-hidden transition-all duration-300 bg-gray-50 hover:bg-white hover:shadow-lg hover:shadow-gray-200/30">
+              <button class="faq-toggle w-full px-6 py-5 text-left font-bold text-lg text-gray-900 flex justify-between items-center select-none" onclick="toggleFaq(this)">
+                <span>E se a internet cair no meio do serviço?</span>
+                <i data-lucide="chevron-down" class="faq-chevron w-5 h-5 text-brand-red transition-transform duration-300"></i>
+              </button>
+              <div class="faq-content max-h-0 opacity-0 overflow-hidden transition-all duration-300 ease-in-out px-6">
+                <p class="pb-6 text-gray-600 leading-relaxed">
+                  Nossos procedimentos são feitos com margem de segurança. Caso haja queda, o processo é pausado e retomado assim que a conexão estabilizar, sem riscos de corromper os módulos na maioria dos casos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+          <div class="reveal">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Fale com o Cristiam</h2>
+          </div>
+          <div class="reveal">
+            <p class="text-gray-600 text-lg">Solicite um diagnóstico remoto ou tire suas dúvidas</p>
+          </div>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          <!-- Contact Info -->
+          <div class="h-full">
+            <div class="reveal h-full">
+              <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-lg transition-shadow duration-300 h-full font-sans">
+                <h3 class="text-2xl font-bold mb-8 text-brand-red border-b border-gray-100 pb-4">Informações de Contato</h3>
+                <ul class="space-y-8">
+                  <!-- Item 1 Location -->
+                  <li class="flex items-start gap-4 group">
+                    <div class="bg-red-50 p-3 rounded-full text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 shadow-sm">
+                      <i data-lucide="map-pin" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900 mb-1">Localização</h4>
+                      <div class="text-gray-600 space-y-0.5">
+                        <p>Atendimento 100% Remoto</p>
+                        <p>Todo o Brasil</p>
+                        <a 
+                          href="https://share.google/EhSPuf8J3y6QkUoJO" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          class="inline-block mt-2 text-brand-red font-semibold hover:underline transition-colors text-sm"
+                        >
+                          Ver no Google Maps &rarr;
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- Item 2 Phone -->
+                  <li class="flex items-start gap-4 group">
+                    <div class="bg-red-50 p-3 rounded-full text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 shadow-sm">
+                      <i data-lucide="phone" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900 mb-1">Telefones</h4>
+                      <div class="text-gray-600 space-y-0.5">
+                        <p>Fixo: (51) 3473-0451</p>
+                        <p>WhatsApp: (51) 9372-6942</p>
+                      </div>
+                    </div>
+                  </li>
+
+                  <!-- Item 3 Email -->
+                  <li class="flex items-start gap-4 group">
+                    <div class="bg-red-50 p-3 rounded-full text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 shadow-sm">
+                      <i data-lucide="mail" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900 mb-1">Email</h4>
+                      <div class="text-gray-600 break-all">contato@cristiam.com.br</div>
+                    </div>
+                  </li>
+
+                  <!-- Item 4 Horário -->
+                  <li class="flex items-start gap-4 group">
+                    <div class="bg-red-50 p-3 rounded-full text-brand-red group-hover:bg-brand-red group-hover:text-white transition-colors duration-300 shadow-sm">
+                      <i data-lucide="clock" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900 mb-1">Horário de Atendimento</h4>
+                      <div class="text-gray-600">Seg-Sex 8h-18h | Sab 8h-12h</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Appointment Form -->
+          <div class="h-full">
+            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border-t-8 border-brand-green h-full">
+              <h3 class="text-3xl font-bold mb-3 text-gray-900">Agendar Diagnóstico</h3>
+              <p class="text-gray-600 mb-10">Preencha os dados abaixo e entraremos em contato via WhatsApp rapidamente.</p>
+              
+              <form id="contact-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
+                <div>
+                  <label for="nome" class="block text-sm font-bold text-gray-700 mb-2 ml-1">Seu Nome / Oficina</label>
+                  <input
+                    type="text"
+                    id="nome"
+                    required
+                    class="w-full px-5 py-4 rounded-xl border border-gray-300 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-green focus:border-transparent focus:scale-[1.01] outline-none transition-all duration-300 placeholder-gray-400"
+                    placeholder="Ex: Auto Elétrica São João"
+                  />
+                </div>
+
+                <div>
+                  <label for="veiculo" class="block text-sm font-bold text-gray-700 mb-2 ml-1">Modelo do Veículo (VW ou GM)</label>
+                  <input
+                    type="text"
+                    id="veiculo"
+                    required
+                    class="w-full px-5 py-4 rounded-xl border border-gray-300 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-green focus:border-transparent focus:scale-[1.01] outline-none transition-all duration-300 placeholder-gray-400"
+                    placeholder="Ex: Chevrolet Cruze 2018"
+                  />
+                </div>
+
+                <div>
+                  <label for="problema" class="block text-sm font-bold text-gray-700 mb-2 ml-1">Descrição do Problema</label>
+                  <textarea
+                    id="problema"
+                    required
+                    rows="4"
+                    class="w-full px-5 py-4 rounded-xl border border-gray-300 bg-gray-50 focus:bg-white focus:ring-2 focus:ring-brand-green focus:border-transparent focus:scale-[1.01] outline-none transition-all duration-300 placeholder-gray-400 resize-none"
+                    placeholder="Ex: Falha de comunicação na rede CAN..."
+                  ></textarea>
+                </div>
+
+                <button 
+                  type="submit" 
+                  class="w-full bg-brand-green hover:bg-brand-greenHover text-white font-bold text-lg py-5 rounded-xl flex items-center justify-center gap-3 transition-all transform hover:-translate-y-1 hover:shadow-lg hover:shadow-green-900/20 active:scale-95"
+                >
+                  <i data-lucide="send" class="w-5 h-5"></i>
+                  Enviar via WhatsApp
+                </button>
+                
+                <p class="text-xs text-center text-gray-400 mt-6">
+                  Seus dados estão seguros. Ao clicar, você será redirecionado para o WhatsApp.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#111111] text-gray-400 py-12 border-t border-gray-800">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <!-- Brand -->
+          <div>
+            <div class="text-2xl font-bold text-white tracking-tighter uppercase mb-4">
+              Cristiam <span class="text-brand-red">Diagnóstico Remoto</span>
+            </div>
+            <p class="mb-4 text-sm leading-relaxed">
+              Cristiam Hiroshi Correa Hanada - ME<br/>
+              CNPJ: 11.276.585/0001-93
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="text-gray-400 hover:text-white transition-colors" aria-label="Facebook">
+                <i data-lucide="facebook" class="w-6 h-6"></i>
+              </a>
+              <a href="https://instagram.com/cristiamtecnoauto" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-colors" aria-label="Instagram">
+                <i data-lucide="instagram" class="w-6 h-6"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Navegação</h4>
+            <ul class="space-y-2">
+              <li><a href="#hero" class="hover:text-brand-yellow transition-colors text-sm">Home</a></li>
+              <li><a href="#about" class="hover:text-brand-yellow transition-colors text-sm">Sobre</a></li>
+              <li><a href="#services" class="hover:text-brand-yellow transition-colors text-sm">Serviços</a></li>
+              <li><a href="#contact" class="hover:text-brand-yellow transition-colors text-sm">Contato</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Summary -->
+          <div>
+            <h4 class="text-white font-bold mb-4 uppercase text-sm tracking-wider">Contato Rápido</h4>
+            <p class="text-sm mb-2">(51) 3473-0451</p>
+            <p class="text-sm mb-2">(51) 9372-6942</p>
+            <p class="text-sm mb-4">contato@cristiam.com.br</p>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 text-center text-xs space-y-2">
+          <p>&copy; <span id="year"></span> Cristiam Diagnóstico Remoto. Todos os direitos reservados.</p>
+          <div class="text-gray-600">
+            <a 
+              href="https://wa.me/555181028246?text=Gostei%20do%20site%20do%20Cristiam%20e%20gostaria%20de%20te%20contratar!" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              class="hover:text-brand-yellow transition-colors font-semibold"
+            >
+              Faça seu site com Rodrigo Fontoura (clique aqui)
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a 
+      href="https://wa.me/555193726942?text=Ol%C3%A1%20Cristiam%2C%20vi%20o%20teu%20site%20e%20preciso%20de%20suporte%20remoto%20para%20um%20diagn%C3%B3stico%2Fprograma%C3%A7%C3%A3o."
+      target="_blank"
+      rel="noopener noreferrer"
+      class="fixed bottom-6 right-6 bg-brand-green hover:bg-brand-greenHover text-white p-4 rounded-full shadow-2xl z-50 transition-all transform hover:scale-110 active:scale-95 flex items-center justify-center animate-pulse-scale"
+      aria-label="Falar no WhatsApp"
+    >
+      <i data-lucide="message-circle" class="w-8 h-8 fill-current"></i>
+    </a>
+
+    <!-- SCRIPTS -->
+    <script>
+      // Initialize Lucide Icons
+      lucide.createIcons();
+
+      // Set Copyright Year Dynamically
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // HEADER SCROLL EFFECT
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          header.classList.remove('py-5');
+          header.classList.add('py-2');
+        } else {
+          header.classList.remove('py-2');
+          header.classList.add('py-5');
+        }
+      });
+
+      // MOBILE MENU TOGGLE
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = document.getElementById('menu-icon');
+
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        const isHidden = mobileMenu.classList.contains('hidden');
+        menuIcon.setAttribute('data-lucide', isHidden ? 'menu' : 'x');
+        lucide.createIcons();
+      });
+
+      // Close mobile menu on click of a link
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+      mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          menuIcon.setAttribute('data-lucide', 'menu');
+          lucide.createIcons();
+        });
+      });
+
+      // INTERSECTION OBSERVER FOR SCROLL REVEAL ANIMATIONS
+      const revealElements = document.querySelectorAll('.reveal');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            observer.unobserve(entry.target); // Animate only once
+          }
+        });
+      }, {
+        threshold: 0.05,
+        rootMargin: "0px 0px -40px 0px"
+      });
+
+      revealElements.forEach(el => observer.observe(el));
+
+      // TESTIMONIAL SLIDER CAROUSEL LITE
+      let currentSlide = 0;
+      const slider = document.getElementById('testimonial-slider');
+      const dots = document.querySelectorAll('.dot-btn');
+      const totalSlides = dots.length;
+
+      function goToSlide(index) {
+        currentSlide = index;
+        slider.style.transform = `translateX(-${index * 100}%)`;
+        
+        // Update dot styles
+        dots.forEach((dot, idx) => {
+          if (idx === index) {
+            dot.classList.remove('bg-gray-300');
+            dot.classList.add('bg-brand-red');
+          } else {
+            dot.classList.remove('bg-brand-red');
+            dot.classList.add('bg-gray-300');
+          }
+        });
+      }
+
+      // Auto-slide every 6 seconds
+      setInterval(() => {
+        let nextSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(nextSlide);
+      }, 6000);
+
+      // FAQ ACCORDION INTERACTIVITY
+      function toggleFaq(button) {
+        const content = button.nextElementSibling;
+        const chevron = button.querySelector('.faq-chevron');
+        const item = button.parentElement;
+
+        // Close all other FAQs
+        const allItems = document.querySelectorAll('.faq-item');
+        allItems.forEach(otherItem => {
+          if (otherItem !== item) {
+            const otherContent = otherItem.querySelector('.faq-content');
+            const otherChevron = otherItem.querySelector('.faq-chevron');
+            otherContent.style.maxHeight = null;
+            otherContent.classList.remove('opacity-100');
+            otherContent.classList.add('opacity-0');
+            otherChevron.classList.remove('rotate-180');
+            otherItem.classList.remove('bg-white', 'shadow-lg');
+            otherItem.classList.add('bg-gray-50');
+          }
+        });
+
+        // Toggle current FAQ
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          content.classList.remove('opacity-100');
+          content.classList.add('opacity-0');
+          chevron.classList.remove('rotate-180');
+          item.classList.remove('bg-white', 'shadow-lg');
+          item.classList.add('bg-gray-50');
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          content.classList.remove('opacity-0');
+          content.classList.add('opacity-100');
+          chevron.classList.add('rotate-180');
+          item.classList.remove('bg-gray-50');
+          item.classList.add('bg-white', 'shadow-lg');
+        }
+      }
+
+      // FORM SUBMIT WHATSAPP INTEGRATION
+      function handleFormSubmit(event) {
+        event.preventDefault();
+        const nome = document.getElementById('nome').value;
+        const veiculo = document.getElementById('veiculo').value;
+        const problema = document.getElementById('problema').value;
+        
+        const whatsappRaw = '555193726942';
+        const text = `Olá, sou *${nome}*.\nVeículo: *${veiculo}*.\nPreciso de suporte remoto para: _${problema}_`;
+        const encodedText = encodeURIComponent(text);
+        const url = `https://wa.me/${whatsappRaw}?text=${encodedText}`;
+        
+        window.open(url, '_blank');
+      }
+    </script>
+  </body>
+</html>
